@@ -6,9 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name: string = ""
+  name: string = "";
+  date: string = "";
+  amount: string = "";
 
   onNameChange(value: string) {
     this.name = value;
+  }
+
+  onDateChange(value: string){
+    this.date = value;
+  }
+
+  onAmoungChange(value: string) {
+    this.amount = value
   }
 }

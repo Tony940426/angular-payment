@@ -12,6 +12,32 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label><b>Payment Date</b></label>
+      <input type ="date" class="form-control"  (input)="onDateChange($any($event).target.value)"/>
+    </div>
+    <div class="col">
+      <label><b>Payment Date</b></label>
+      <div>
+        {{ date | date: 'longDate' }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label><b>Enter Amount</b></label>
+      <input class="form-control"  (input)="onAmoungChange($any($event).target.value)"/>
+    </div>
+    <div class="col">
+      <label><b>Amount</b></label>
+      <div>
+        {{ amount | currency }}
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Pipe is normally only used in the template (instead of the component file). It can be used in the component file but the majoarity of the time it is done through the template. -->
