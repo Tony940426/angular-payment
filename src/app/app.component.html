@@ -1,10 +1,17 @@
 <div class="container">
-  <div>
-    <label for="">Payee Name</label>
-    <input (input)="onNameChange($any($event).target.value)"/>
-
+  <h3>Payment Form</h3>
+  <div class="row">
+    <div class="form-group col">
+      <label><b>Payee Name</b></label>
+      <input class="form-control"  (input)="onNameChange($any($event).target.value)"/>
+    </div>
+    <div class="col">
+      <label><b>Name</b></label>
+      <div>
+        {{ name | titlecase }}
+      </div>
+    </div>
   </div>
 </div>
 
-{{ name | titlecase }}
 <!-- Pipe is normally only used in the template (instead of the component file). It can be used in the component file but the majoarity of the time it is done through the template. -->
