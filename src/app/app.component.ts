@@ -9,6 +9,7 @@ export class AppComponent {
   name: string = "";
   date: string = "";
   amount: string = "";
+  miles: number = 0;
 
   onNameChange(value: string) {
     this.name = value;
@@ -20,5 +21,9 @@ export class AppComponent {
 
   onAmoungChange(value: string) {
     this.amount = value
+  }
+
+  onMilesChange(value: number) {
+    this.miles = value;
   }
 }

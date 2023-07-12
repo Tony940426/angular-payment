@@ -38,6 +38,19 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label><b>Enter Miles</b></label>
+      <input class="form-control"  (input)="onMilesChange($any($event).target.value)"/>
+    </div>
+    <div class="col">
+      <label><b>Converted KM</b></label>
+      <div>
+        {{ miles | convert }}
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Pipe is normally only used in the template (instead of the component file). It can be used in the component file but the majoarity of the time it is done through the template. -->
